@@ -1,0 +1,9 @@
+.section {
+  background-color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 30px;
+}

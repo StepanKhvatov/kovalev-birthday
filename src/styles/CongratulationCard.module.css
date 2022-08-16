@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  width: 500px;
+  height: 540px;
+  border-radius: 60px;
+  background: #f89d98;
+  overflow: hidden;
+  padding: 40px;
+  box-sizing: border-box;
+  justify-self: center;
+}
+
+.text {
+  font-family: "Futura PT";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 41px;
+  color: inherit;
+  margin: 0;
+}
+
+.name {
+  font-family: "Futura PT";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  color: inherit;
+  margin: 0;
+}

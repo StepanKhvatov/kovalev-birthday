@@ -1,0 +1,34 @@
+.section {
+  background-color: #0065ff;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 113px;
+}
+
+.title {
+  font-family: "Dela Gothic One";
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 101px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  margin: 0;
+}
+
+.gradient-title {
+  composes: title;
+  background: -webkit-linear-gradient(
+    rgba(255, 97, 97, 1),
+    rgba(228, 62, 255, 1),
+    rgba(242, 235, 63, 1)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
