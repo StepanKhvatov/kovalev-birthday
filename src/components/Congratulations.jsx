@@ -9,7 +9,7 @@ const Congratulations = () => {
   useEffect(() => {
     setLoadingData(true);
 
-    fetch("https://kovalev-congratulations.vercel.app/api/congratulations")
+    fetch(process.env.REACT_APP_API_URL)
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -25,7 +25,7 @@ const Congratulations = () => {
         return res;
       })
       .catch((error) => {
-        console.error(error.message);
+        console.error(error?.message || error);
       })
       .finally(() => {
         setLoadingData(false);

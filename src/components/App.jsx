@@ -1,12 +1,13 @@
 import Banner from "../components/Banner";
 import Congratulations from "./Congratulations";
-import appStyles from "../styles/App.module.css";
+import CreateCongratulation from "./CreateCongratulation";
 
 function App() {
   return (
     <div className="App">
       <main>
         <Banner />
+        <CreateCongratulation />
         <Congratulations />
       </main>
     </div>
