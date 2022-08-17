@@ -1,0 +1,29 @@
+.strip {
+  height: 130px;
+  background: #f2eb3f;
+  padding: 20px 0 20px 0;
+  font-family: "Dela Gothic One";
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 87px;
+  text-transform: uppercase;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  gap: 50px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 100;
+}
+
+.text {
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+
+.image {
+  width: 90px;
+  height: 90px;
+}

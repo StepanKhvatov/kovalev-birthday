@@ -1,0 +1,38 @@
+.section {
+  background: #b7f7f7;
+}
+
+.title {
+  color: #0065ff;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 51px;
+  color: #232323;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.card {
+  width: 445px;
+  height: 590px;
+  background: #ffffff;
+  border-radius: 60px;
+  transform: rotate(3deg);
+}
