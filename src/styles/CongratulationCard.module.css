@@ -6,12 +6,12 @@
   width: 100%;
   min-height: 540px;
   border-radius: 60px;
-  background: #f89d98;
   overflow: hidden;
   padding: 40px;
   box-sizing: border-box;
   justify-self: center;
   gap: 20px;
+  transition: all 0.2s;
 }
 
 .text {
@@ -32,6 +32,11 @@
   margin: 0;
 }
 
+.card:hover {
+  transform: rotate(0) scale(0.9) !important;
+  border-radius: 30px;
+}
+
 @media screen and (max-width: 968px) {
   .card {
     padding: 35px;
@@ -48,6 +53,10 @@
   .card {
     padding: 30px;
     min-height: 340px;
+  }
+
+  .card {
+    pointer-events: none;
   }
 
   .text {

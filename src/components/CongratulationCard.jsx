@@ -7,7 +7,7 @@ const stylesArray = [
     transform: `rotate(-5deg) scale(0.9)`,
   },
   {
-    background: "0065FF",
+    background: "#0065FF",
     color: "white",
     transform: `rotate(3deg) scale(0.9)`,
   },
