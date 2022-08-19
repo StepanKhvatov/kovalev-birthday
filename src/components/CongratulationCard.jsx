@@ -19,7 +19,7 @@ const stylesArray = [
   {
     background: "#F2EB3F",
     color: "black",
-    transform: `rotate(8deg) scale(0.9)`,
+    transform: `rotate(6deg) scale(0.9)`,
   },
   {
     background: "#000000",
@@ -39,7 +39,7 @@ const stylesArray = [
   {
     background: "#0065FF",
     color: "white",
-    transform: `rotate(8deg) scale(0.9)`,
+    transform: `rotate(5deg) scale(0.9)`,
   },
   {
     background: "#F89D98",

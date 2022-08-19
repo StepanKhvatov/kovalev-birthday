@@ -1,7 +1,7 @@
 .section {
   background-color: #0065ff;
   position: relative;
-  min-height: 900px;
+
   overflow: hidden;
 }
 
@@ -14,8 +14,6 @@
 }
 
 .title {
-  font-family: "Dela Gothic One";
-  font-weight: 400;
   font-size: 70px;
   line-height: 101px;
   text-align: center;
@@ -34,4 +32,26 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 968px) {
+  .title {
+    font-size: 50px;
+    line-height: 77px;
+  }
+
+  .title-container {
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .title {
+    font-size: 34px;
+    line-height: 47px;
+  }
+
+  .title-container {
+    margin-bottom: 40px;
+  }
 }

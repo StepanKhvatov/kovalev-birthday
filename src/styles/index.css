@@ -55,3 +55,29 @@ button {
   font: inherit;
   cursor: pointer;
 }
+
+.main {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 968px) {
+  .title {
+    font-size: 50px;
+    line-height: 77px;
+  }
+
+  .container {
+    padding: 80px 15px 80px 15px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .title {
+    font-size: 34px;
+    line-height: 47px;
+  }
+
+  .container {
+    padding: 60px 10px 60px 10px;
+  }
+}

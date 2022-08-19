@@ -51,7 +51,7 @@ const CongratulationsBlocks = () => {
 function App() {
   return (
     <div className="App">
-      <main>
+      <main className="main">
         <Banner />
         <Race />
         <IllegalRacer />

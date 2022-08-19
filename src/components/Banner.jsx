@@ -6,10 +6,12 @@ const Banner = () => {
     <section className={bannerStyles.section}>
       <div className="container">
         <div className={bannerStyles["title-container"]}>
-          <h1 className={bannerStyles.title}>Tada-a-am!</h1>
-          <h2 className={bannerStyles.title}>
+          <h1 className={`${bannerStyles.title} title`}>Tada-a-am!</h1>
+          <h2 className={`${bannerStyles.title} title`}>
             It’s your{" "}
-            <span className={bannerStyles["gradient-title"]}>birthday</span>
+            <span className={`${bannerStyles["gradient-title"]} title`}>
+              birthday
+            </span>
           </h2>
         </div>
         <Switcher />

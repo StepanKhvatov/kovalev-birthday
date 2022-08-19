@@ -4,7 +4,7 @@ const Father = () => {
   return (
     <section className={fatherStyles.section}>
       <div className="container">
-        <h2 className={fatherStyles.title}>молодой отец</h2>
+        <h2 className={`${fatherStyles.title} title`}>молодой отец</h2>
       </div>
     </section>
   );
