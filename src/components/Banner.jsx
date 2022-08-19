@@ -1,6 +1,5 @@
 import Switcher from "./Switcher";
 import bannerStyles from "../styles/Banner.module.css";
-import Strip from "./Strip";
 
 const Banner = () => {
   return (
@@ -14,10 +13,6 @@ const Banner = () => {
           </h2>
         </div>
         <Switcher />
-      </div>
-      <div className={bannerStyles["strip-container"]}>
-        <Strip classes={bannerStyles["first-strip"]} />
-        <Strip classes={bannerStyles["second-strip"]} />
       </div>
     </section>
   );

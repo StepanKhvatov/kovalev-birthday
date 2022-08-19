@@ -1,20 +1,60 @@
 import congratulationCardStyles from "../styles/CongratulationCard.module.css";
 
-const colorsArray = [
-  { background: "#B7F7F7", color: "black" },
-  { background: "0065FF", color: "white" },
-  { background: "#F89D98", color: "white" },
-  { background: "#F2EB3F", color: "black" },
-  { background: "#000000", color: "white" },
-  { background: "#B3B3B3", color: "white" },
-  { background: "#B7F7F7", color: "black" },
-  { background: "#0065FF", color: "white" },
-  { background: "#F89D98", color: "white" },
-  { background: "#F2EB3F", color: "black" },
+const stylesArray = [
+  {
+    background: "#B7F7F7",
+    color: "black",
+    transform: `rotate(-5deg) scale(0.9)`,
+  },
+  {
+    background: "0065FF",
+    color: "white",
+    transform: `rotate(3deg) scale(0.9)`,
+  },
+  {
+    background: "#F89D98",
+    color: "white",
+    transform: `rotate(2deg) scale(0.9)`,
+  },
+  {
+    background: "#F2EB3F",
+    color: "black",
+    transform: `rotate(8deg) scale(0.9)`,
+  },
+  {
+    background: "#000000",
+    color: "white",
+    transform: `rotate(5deg) scale(0.9)`,
+  },
+  {
+    background: "#B3B3B3",
+    color: "white",
+    transform: `rotate(2deg) scale(0.9)`,
+  },
+  {
+    background: "#B7F7F7",
+    color: "black",
+    transform: `rotate(-5deg) scale(0.9)`,
+  },
+  {
+    background: "#0065FF",
+    color: "white",
+    transform: `rotate(8deg) scale(0.9)`,
+  },
+  {
+    background: "#F89D98",
+    color: "white",
+    transform: `rotate(2deg) scale(0.9)`,
+  },
+  {
+    background: "#F2EB3F",
+    color: "black",
+    transform: `rotate(3deg) scale(0.9)`,
+  },
 ];
 
 const CongratulationCard = ({ text, name, index }) => {
-  const styleObject = colorsArray[index % colorsArray.length];
+  const styleObject = stylesArray[index % stylesArray.length];
 
   return (
     <article style={styleObject} className={congratulationCardStyles.card}>

@@ -1,10 +1,10 @@
 import CongratulationForm from "./CongratulationForm";
 
-const CreateCongratulation = () => {
+const CreateCongratulation = ({ setData }) => {
   return (
     <section style={{ background: "#f2eb3f" }}>
       <div className="container">
-        <CongratulationForm />
+        <CongratulationForm setData={setData} />
       </div>
     </section>
   );

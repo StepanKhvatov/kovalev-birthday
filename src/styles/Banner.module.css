@@ -13,12 +13,6 @@
   margin-bottom: 113px;
 }
 
-.strip-container {
-  width: 100%;
-  position: relative;
-  transform: translate(0, 150px);
-}
-
 .title {
   font-family: "Dela Gothic One";
   font-weight: 400;
@@ -40,14 +34,4 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.first-strip {
-  inset: auto -30px 0px -30px;
-  transform: rotate(-3deg);
-}
-
-.second-strip {
-  inset: auto -30px 0px -30px;
-  transform: rotate(5deg);
 }

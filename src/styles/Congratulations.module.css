@@ -4,6 +4,8 @@
 
 .container {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(2, 50%);
   gap: 30px;
+  box-sizing: border-box;
 }

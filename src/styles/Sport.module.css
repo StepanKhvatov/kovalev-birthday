@@ -1,0 +1,21 @@
+.section {
+  background-color: white;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.title {
+  color: black;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}

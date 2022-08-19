@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import congratulationFormStyles from "../styles/CongratulationForm.module.css";
 
-const CongratulationForm = () => {
+const CongratulationForm = ({ setData }) => {
   const [loadingSubmit, setLoadingSubmit] = useState(false);
 
   const onSubmit = (event) => {
@@ -28,7 +28,14 @@ const CongratulationForm = () => {
         return Promise.reject(`Ошибка ${res.status}`);
       })
       .then((res) => {
-        console.log(res);
+        if (res.success) {
+          event.target.name.value = "";
+          event.target.text.value = "";
+
+          return setData((prevState) => [...prevState, res.data]);
+        }
+
+        return res;
       })
       .catch((error) => {
         console.error(error.message || error);
