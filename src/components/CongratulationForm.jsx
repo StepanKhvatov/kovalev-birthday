@@ -50,6 +50,7 @@ const CongratulationForm = ({ setData }) => {
           event.target.name.value = "";
           event.target.text.value = "";
 
+          setSelectedColor("#FFF960");
           return setData((prevState) => [...prevState, res.data]);
         }
 
