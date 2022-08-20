@@ -1,7 +1,7 @@
-import tigerImage from "../images/tiger.png"
+import tigerImage from "../images/tiger.png";
 import sportStyles from "../styles/Sport.module.css";
-import pumpItImage from "../images/pumpIt.png"
-import sportVideo from "../video/2022-08-21 01.43.49.mp4"
+import pumpItImage from "../images/pumpIt.png";
+import sportVideo from "../video/2022-08-21 01.43.49.mp4";
 
 const Sport = () => {
   return (
@@ -10,17 +10,27 @@ const Sport = () => {
         <div className={sportStyles.content}>
           <div className={sportStyles["title-container"]}>
             <h2 className={`${sportStyles.title} title`}>успешный спортсмен</h2>
-            <p className={sportStyles.description} >Все успешные спортсмены целеустремленные </p>
+            <p className={sportStyles.description}>
+              Все успешные спортсмены целеустремленные{" "}
+            </p>
           </div>
           <div className={sportStyles["content-container"]}>
             <div className={sportStyles["video-container"]}>
-              <iframe className={sportStyles["content-block"]} src={sportVideo} title="sport"/>
-              <img src={tigerImage} alt="tiger" className={sportStyles.tiger}/>
+              <video
+                className={sportStyles["content-block"]}
+                src={sportVideo}
+                title="sport"
+                muted
+                autoPlay
+              />
+              <img src={tigerImage} alt="tiger" className={sportStyles.tiger} />
             </div>
-            <p className={sportStyles.vs}>
-              VS
-            </p>
-              <img src={pumpItImage} alt="pump" className={sportStyles["content-block"]}/>
+            <p className={sportStyles.vs}>VS</p>
+            <img
+              src={pumpItImage}
+              alt="pump"
+              className={sportStyles["content-block"]}
+            />
           </div>
         </div>
       </div>
