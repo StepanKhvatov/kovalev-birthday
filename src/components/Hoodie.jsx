@@ -4,13 +4,10 @@ import Modal from "./Modal";
 import hoodie from "../images/hoodie.jpg";
 import Button from "./Button";
 import arrowImage from "../images/arrow.png";
-import { motion, useTime, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Hoodie = () => {
   const [showModal, setShowModal] = useState(false);
-
-  const time = useTime();
-  const scale = useTransform(time, [0, 4000], [0, 360], { clamp: false });
 
   return (
     <section className={hoodieStyles.section}>
@@ -27,7 +24,15 @@ const Hoodie = () => {
 
         <div className={hoodieStyles["arrow-container"]}>
           <motion.img
-            // style={{ scale }}
+            animate={{
+              scale: [1, 0.85, 1],
+            }}
+            transition={{
+              duration: 1,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatDelay: 0.5,
+            }}
             src={arrowImage}
             className={hoodieStyles["arrow-image"]}
             alt="arrow"
