@@ -1,0 +1,11 @@
+.modal-overlay {
+  position: fixed;
+  display: flex;
+  inset: 0;
+  padding: 10px 20px 10px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 200;
+  overflow-y: scroll;
+  justify-content: center;
+  box-sizing: border-box;
+}
