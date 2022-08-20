@@ -1,0 +1,41 @@
+.container {
+  top: 700px;
+  position: absolute;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.first-strip {
+  transform: rotate(-3deg) translate(-20px, -65px);
+}
+
+.second-strip {
+  transform: rotate(5deg) translate(-20px, 55px);
+}
+
+@media screen and (max-width: 968px) {
+  .container {
+    top: 500px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .container {
+    top: 550px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .container {
+    top: 420px;
+  }
+
+  .first-strip {
+    transform: rotate(-3deg) translate(-300px, -65px);
+  }
+
+  .second-strip {
+    transform: rotate(5deg) translate(-90px, 55px);
+  }
+}

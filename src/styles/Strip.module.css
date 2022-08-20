@@ -14,7 +14,6 @@
   overflow: hidden;
   gap: 50px;
   box-sizing: border-box;
-  position: absolute;
   z-index: 100;
 }
 
@@ -26,4 +25,17 @@
 .image {
   width: 90px;
   height: 90px;
+}
+
+@media screen and (max-width: 968px) {
+  .strip {
+    height: 77px;
+    font-size: 35.8566px;
+    line-height: 52px;
+  }
+
+  .image {
+    width: 53px;
+    height: 53px;
+  }
 }

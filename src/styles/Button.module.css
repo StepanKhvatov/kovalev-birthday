@@ -1,0 +1,30 @@
+.button {
+  padding: 40px 80px 40px 80px;
+  border: 3px solid #000000;
+  border-radius: 105px;
+  font-family: "Dela Gothic One";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 58px;
+  text-transform: uppercase;
+  color: #000000;
+  width: fit-content;
+  transition: all 0.3ms;
+}
+
+@media screen and (max-width: 968px) {
+  .button {
+    padding: 30px 60px 30px 60px;
+    font-size: 30px;
+    line-height: 48px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .button {
+    width: 100%;
+    padding: 20px 30px 20px 30px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

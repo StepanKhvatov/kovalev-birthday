@@ -1,7 +1,7 @@
 import heartImage from "../images/heart.png";
 import stripStyles from "../styles/Strip.module.css";
 
-const Strip = ({ classes }) => {
+const Strip = ({ classes = "" }) => {
   return (
     <div className={`${stripStyles.strip} ${classes}`}>
       <img src={heartImage} className={stripStyles.image} alt="heart" />

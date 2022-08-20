@@ -12,6 +12,7 @@ const Congratulations = ({ data, loadingData }) => {
               <CongratulationCard
                 text={item.text}
                 name={item.name}
+                color={item.color}
                 index={index}
                 key={item.id}
               />
