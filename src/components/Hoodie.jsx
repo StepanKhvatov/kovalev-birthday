@@ -11,6 +11,8 @@ const Hoodie = () => {
   const [loadingSubmit, setLoadingSubmit] = useState(false);
 
   const onSubmit = (event) => {
+    setLoadingSubmit(true);
+
     event.preventDefault();
 
     const { name, contacts } = event.target;
@@ -36,7 +38,7 @@ const Hoodie = () => {
       .then((res) => {
         if (res.success) {
           event.target.name.value = "";
-          event.target.text.value = "";
+          event.target.contacts.value = "";
         }
 
         return res;
@@ -105,7 +107,9 @@ const Hoodie = () => {
                 className={hoodieStyles["input"]}
               />
             </div>
-            <Button disabled={loadingSubmit}>Отправить</Button>
+            <Button disabled={loadingSubmit}>
+              {loadingSubmit ? "Отправляем..." : "Отправить"}
+            </Button>
           </form>
         </div>
       </Modal>
