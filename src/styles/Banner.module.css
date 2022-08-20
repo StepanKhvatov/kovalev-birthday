@@ -1,7 +1,7 @@
 .section {
   background-color: #0065ff;
   position: relative;
-
+  min-height: 800px;
   overflow: hidden;
 }
 
@@ -35,6 +35,10 @@
 }
 
 @media screen and (max-width: 968px) {
+  .section {
+    min-height: auto;
+  }
+
   .title {
     font-size: 50px;
     line-height: 77px;
