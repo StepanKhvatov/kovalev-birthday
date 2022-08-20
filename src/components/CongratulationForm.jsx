@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { motion } from "framer-motion";
+import Button from "./Button";
 import congratulationFormStyles from "../styles/CongratulationForm.module.css";
 
 const colors = [
@@ -106,16 +106,9 @@ const CongratulationForm = ({ setData }) => {
             })}
           </div>
         </div>
-        <motion.button
-          disabled={loadingSubmit}
-          type="submit"
-          className={congratulationFormStyles.button}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        >
+        <Button disabled={loadingSubmit}>
           {loadingSubmit ? "Создаём..." : "Отправить"}
-        </motion.button>
+        </Button>
       </div>
     </form>
   );

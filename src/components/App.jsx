@@ -10,6 +10,7 @@ import Father from "./Father";
 import Congratulations from "./Congratulations";
 import CreateCongratulation from "./CreateCongratulation";
 import DoubleStrip from "./DoubleStrip";
+import Hoodie from "./Hoodie";
 
 const CongratulationsBlocks = () => {
   const [data, setData] = useState([]);
@@ -61,6 +62,7 @@ function App() {
         <StartUp />
         <Sport />
         <Father />
+        <Hoodie />
         <CongratulationsBlocks />
       </main>
     </div>
