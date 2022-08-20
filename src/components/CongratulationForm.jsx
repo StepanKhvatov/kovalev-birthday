@@ -1,9 +1,23 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import congratulationFormStyles from "../styles/CongratulationForm.module.css";
 
+const colors = [
+  "#FFF960",
+  "#B7F7F7",
+  "#0065FF",
+  "#F89D98",
+  "#000000",
+  "#B3B3B3",
+];
+
 const CongratulationForm = ({ setData }) => {
+  const [selectedColor, setSelectedColor] = useState("#FFF960");
   const [loadingSubmit, setLoadingSubmit] = useState(false);
+
+  const onColorSelect = useCallback((color) => {
+    setSelectedColor(color);
+  }, []);
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -14,7 +28,11 @@ const CongratulationForm = ({ setData }) => {
 
     fetch(process.env.REACT_APP_API_URL, {
       method: "POST",
-      body: JSON.stringify({ text: text.value, name: name.value }),
+      body: JSON.stringify({
+        text: text.value,
+        name: name.value,
+        color: selectedColor,
+      }),
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -59,15 +77,44 @@ const CongratulationForm = ({ setData }) => {
         className={congratulationFormStyles.input}
         placeholder="От кого"
       />
-      <motion.button
-        type="submit"
-        className={congratulationFormStyles.button}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        transition={{ type: "spring", stiffness: 400, damping: 10 }}
-      >
-        Отправить
-      </motion.button>
+      <div className={congratulationFormStyles["actions-container"]}>
+        <div className={congratulationFormStyles["colors-container"]}>
+          <h3 className={congratulationFormStyles["colors-title"]}>
+            Выбери цвет карточки:
+          </h3>
+          <div className={congratulationFormStyles["colors-buttons-container"]}>
+            {colors.map((color) => {
+              const borderCololor = color === "#000000" ? "white" : "#000000";
+
+              return (
+                <button
+                  aria-label="color-select-button"
+                  type="button"
+                  onClick={() => onColorSelect(color)}
+                  style={{
+                    background: color,
+                    border:
+                      selectedColor === color
+                        ? `3px solid ${borderCololor}`
+                        : "",
+                  }}
+                  className={congratulationFormStyles["color-button"]}
+                />
+              );
+            })}
+          </div>
+        </div>
+        <motion.button
+          disabled={loadingSubmit}
+          type="submit"
+          className={congratulationFormStyles.button}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        >
+          {loadingSubmit ? "Создаём..." : "Отправить"}
+        </motion.button>
+      </div>
     </form>
   );
 };
