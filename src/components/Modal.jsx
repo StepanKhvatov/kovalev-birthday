@@ -35,7 +35,10 @@ const Modal = (props) => {
     >
       <Portal>
         <ModalOverlay setShow={setShow}>
-          <div className={`${modalStyles.modal} modal-container`}>
+          <div
+            onClick={(event) => event.stopPropagation()}
+            className={`${modalStyles.modal} modal-container`}
+          >
             {children}
           </div>
         </ModalOverlay>

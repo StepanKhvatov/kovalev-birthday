@@ -8,6 +8,46 @@ import { motion } from "framer-motion";
 
 const Hoodie = () => {
   const [showModal, setShowModal] = useState(false);
+  const [loadingSubmit, setLoadingSubmit] = useState(false);
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    const { name, contacts } = event.target;
+
+    fetch(`${process.env.REACT_APP_API_URL}/hoodie`, {
+      method: "POST",
+      body: JSON.stringify({
+        name: name.value,
+        contacts: contacts.value,
+      }),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+
+        return Promise.reject(`Ошибка ${res.status}`);
+      })
+      .then((res) => {
+        if (res.success) {
+          event.target.name.value = "";
+          event.target.text.value = "";
+        }
+
+        return res;
+      })
+      .catch((error) => {
+        console.error(error.message || error);
+      })
+      .finally(() => {
+        setLoadingSubmit(false);
+      });
+  };
 
   return (
     <section className={hoodieStyles.section}>
@@ -21,7 +61,6 @@ const Hoodie = () => {
         >
           <img src={hoodie} className={hoodieStyles.image} alt="hoodie" />
         </motion.div>
-
         <div className={hoodieStyles["arrow-container"]}>
           <motion.img
             animate={{
@@ -42,10 +81,32 @@ const Hoodie = () => {
       </div>
       <Modal show={showModal} setShow={setShowModal}>
         <div className={hoodieStyles["modal-container"]}>
-          <h3 className={hoodieStyles["modal-title"]}>
-            Поздравляем! Вы выиграли худи Zenfuse
-          </h3>
-          <Button>Отправить</Button>
+          <div className={hoodieStyles["title-container"]}>
+            <h3 className={hoodieStyles["modal-title"]}>Поздравляем!</h3>
+            <h3 className={hoodieStyles["modal-title"]}>
+              Вы выиграли худи Zenfuse
+            </h3>
+            <p className={hoodieStyles["modal-subtitle"]}>
+              *стоимость доставки 150 USDT
+            </p>
+          </div>
+          <form onSubmit={onSubmit} className={hoodieStyles["form"]}>
+            <div className={hoodieStyles["inputs-container"]}>
+              <input
+                name="name"
+                required
+                placeholder="Ваше имя"
+                className={hoodieStyles["input"]}
+              />
+              <input
+                name="contacts"
+                required
+                placeholder="Контакт для связи"
+                className={hoodieStyles["input"]}
+              />
+            </div>
+            <Button disabled={loadingSubmit}>Отправить</Button>
+          </form>
         </div>
       </Modal>
     </section>

@@ -26,7 +26,7 @@ const CongratulationForm = ({ setData }) => {
 
     setLoadingSubmit(true);
 
-    fetch(process.env.REACT_APP_API_URL, {
+    fetch(`${process.env.REACT_APP_API_URL}/congratulations`, {
       method: "POST",
       body: JSON.stringify({
         text: text.value,

@@ -54,6 +54,13 @@
   min-width: 1110px;
 }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .modal-title {
   font-family: "Dela Gothic One";
   font-style: normal;
@@ -63,7 +70,45 @@
   text-transform: uppercase;
   color: #000000;
   margin: 0;
-  margin-bottom: 40px;
+}
+
+.modal-subtitle {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #b3b3b3;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.input {
+  background: #f8f8f8;
+  border-radius: 40px;
+  padding: 20px 40px 20px 40px;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 41px;
+  color: #b3b3b3;
+  border: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -93,11 +138,21 @@
     font-size: 27px;
     line-height: 35px;
   }
+
+  .inputs-container {
+    flex-direction: column;
+  }
+
+  .input {
+    font-size: 26px;
+    line-height: 33px;
+    padding: 12px 20px 12px 20px;
+  }
 }
 
 @media screen and (max-width: 468px) {
   .modal-title {
-    font-size: 22px;
+    font-size: 26px;
     line-height: 38px;
   }
 }

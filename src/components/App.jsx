@@ -18,7 +18,7 @@ const CongratulationsBlocks = () => {
   useEffect(() => {
     setLoadingData(true);
 
-    fetch(process.env.REACT_APP_API_URL)
+    fetch(`${process.env.REACT_APP_API_URL}/congratulations`)
       .then((res) => {
         if (res.ok) {
           return res.json();
