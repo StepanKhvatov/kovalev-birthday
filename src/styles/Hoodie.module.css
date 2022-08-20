@@ -1,0 +1,158 @@
+.section {
+  background: white;
+}
+
+.image-container {
+  width: 700px;
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container:hover {
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.arrow-container {
+  position: absolute;
+  bottom: 80px;
+  right: 100px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-title {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 51px;
+  text-align: center;
+  color: #232323;
+  margin: 0;
+}
+
+.arrow-image {
+  width: 102px;
+  height: 118px;
+  object-fit: contain;
+}
+
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 1110px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.modal-title {
+  font-family: "Dela Gothic One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 58px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+.modal-subtitle {
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #b3b3b3;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.input {
+  background: #f8f8f8;
+  border-radius: 40px;
+  padding: 20px 40px 20px 40px;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 41px;
+  color: #b3b3b3;
+  border: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .modal-container {
+    min-width: auto;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .arrow-container {
+    flex-direction: column;
+    right: auto;
+    bottom: 40px;
+  }
+
+  .arrow-image {
+    width: 51px;
+    height: 59px;
+  }
+
+  .arrow-title {
+    font-size: 27px;
+    line-height: 35px;
+  }
+
+  .inputs-container {
+    flex-direction: column;
+  }
+
+  .input {
+    font-size: 26px;
+    line-height: 33px;
+    padding: 12px 20px 12px 20px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .modal-title {
+    font-size: 26px;
+    line-height: 38px;
+  }
+}

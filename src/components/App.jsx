@@ -9,6 +9,7 @@ import Father from "./Father";
 import Congratulations from "./Congratulations";
 import CreateCongratulation from "./CreateCongratulation";
 import DoubleStrip from "./DoubleStrip";
+import Hoodie from "./Hoodie";
 
 const CongratulationsBlocks = () => {
   const [data, setData] = useState([]);
@@ -17,7 +18,7 @@ const CongratulationsBlocks = () => {
   useEffect(() => {
     setLoadingData(true);
 
-    fetch(process.env.REACT_APP_API_URL)
+    fetch(`${process.env.REACT_APP_API_URL}/congratulations`)
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -59,6 +60,7 @@ function App() {
         <StartUp />
         <Sport />
         <Father />
+        <Hoodie />
         <CongratulationsBlocks />
       </main>
     </div>
