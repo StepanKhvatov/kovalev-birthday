@@ -88,6 +88,7 @@ const CongratulationForm = ({ setData }) => {
 
               return (
                 <button
+                  key={color}
                   aria-label="color-select-button"
                   type="button"
                   onClick={() => onColorSelect(color)}
