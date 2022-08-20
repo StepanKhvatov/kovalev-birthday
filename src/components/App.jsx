@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import Banner from "../components/Banner";
 import Race from "./Race";
-import IllegalRacer from "./IllegalRacer";
 import Pirate from "./Pirate";
 import StartUp from "./StartUp";
 import Sport from "./Sport";
@@ -56,7 +55,6 @@ function App() {
         <DoubleStrip />
         <Banner />
         <Race />
-        <IllegalRacer />
         <Pirate />
         <StartUp />
         <Sport />

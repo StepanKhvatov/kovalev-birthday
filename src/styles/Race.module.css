@@ -1,5 +1,10 @@
-.title {
+.subtitle {
+  position: absolute;
   text-align: center;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 90px;
   font-family: "Futura PT";
   font-style: normal;
   font-weight: 400;
@@ -8,4 +13,115 @@
   text-align: center;
   color: #232323;
   margin: 0;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  color: #0065ff;
+}
+
+.images-block {
+  width: 100%;
+  position: relative;
+  padding-bottom: 800px;
+}
+
+.cops {
+  width: 937px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.brz {
+  width: 1200px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.cone {
+  width: 200px;
+  position: absolute;
+  bottom: -90px;
+  left: 8%;
+}
+
+.video-container {
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  position: absolute;
+  height: 530px;
+  background: #f9f9f9;
+  border-radius: 28.3086px;
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media screen and (max-width: 968px) {
+  .subtitle {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 100px;
+    font-family: "Futura PT";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    color: #232323;
+    margin: 0;
+  }
+
+  .images-block {
+    width: 100%;
+    position: relative;
+    padding-bottom: 450px;
+  }
+
+  .video-container {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    position: absolute;
+    height: 190px;
+    background: #f9f9f9;
+    border-radius: 28.3086px;
+    overflow: hidden;
+  }
+
+  .cone {
+    width: 100px;
+    position: absolute;
+    bottom: -50px;
+    left: 3%;
+  }
+
+  .cops {
+    width: 580px;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .brz {
+    width: 700px;
+    position: absolute;
+    bottom: 0px;
+  }
 }
