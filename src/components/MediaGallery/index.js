@@ -35,6 +35,7 @@ const MediaGallery = ({ media }) => {
         flexDirection: "row",
         alignItems: "start",
         overflow: "hidden",
+        borderRadius: "40px",
         justifyContent: "center",
       }}
     >
