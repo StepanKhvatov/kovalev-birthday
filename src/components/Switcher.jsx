@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
-import image from "../images/Yura.jpg";
+import yura from "../images/Yura.jpg";
+import yuraSmile from "../images/Yura-smile.jpg";
 import switcherStyles from "../styles/Switcher.module.css";
 
 const spring = {
@@ -105,7 +106,7 @@ const Switcher = () => {
       >
         <img
           alt="Yura-sempai"
-          src={image}
+          src={isOn ? yuraSmile : yura}
           className={switcherStyles.image}
           draggable={false}
         />
