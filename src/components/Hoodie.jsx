@@ -39,6 +39,7 @@ const Hoodie = () => {
         if (res.success) {
           event.target.name.value = "";
           event.target.contacts.value = "";
+          setShowModal(false);
         }
 
         return res;
