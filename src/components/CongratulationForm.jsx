@@ -11,13 +11,24 @@ const colors = [
   "#B3B3B3",
 ];
 
-const CongratulationForm = ({ setData }) => {
-  const [selectedColor, setSelectedColor] = useState("#FFF960");
+const textColorByBackground = {
+  "#F2EB3F": "black",
+  "#B7F7F7": "black",
+  "#0065FF": "white",
+  "#F89D98": "white",
+  "#000000": "white",
+  "#B3B3B3": "white",
+};
+
+const CongratulationForm = ({ setData, selectedColor, setSelectedColor }) => {
   const [loadingSubmit, setLoadingSubmit] = useState(false);
 
-  const onColorSelect = useCallback((color) => {
-    setSelectedColor(color);
-  }, []);
+  const onColorSelect = useCallback(
+    (color) => {
+      setSelectedColor(color);
+    },
+    [setSelectedColor]
+  );
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -80,7 +91,10 @@ const CongratulationForm = ({ setData }) => {
       />
       <div className={congratulationFormStyles["actions-container"]}>
         <div className={congratulationFormStyles["colors-container"]}>
-          <h3 className={congratulationFormStyles["colors-title"]}>
+          <h3
+            style={{ color: textColorByBackground[selectedColor] }}
+            className={congratulationFormStyles["colors-title"]}
+          >
             Выбери цвет карточки:
           </h3>
           <div className={congratulationFormStyles["colors-buttons-container"]}>
@@ -106,7 +120,13 @@ const CongratulationForm = ({ setData }) => {
             })}
           </div>
         </div>
-        <Button disabled={loadingSubmit}>
+        <Button
+          style={{
+            borderColor: selectedColor === "#000000" ? "white" : "black",
+            color: selectedColor === "#000000" ? "white" : "black",
+          }}
+          disabled={loadingSubmit}
+        >
           {loadingSubmit ? "Создаём..." : "Отправить"}
         </Button>
       </div>
