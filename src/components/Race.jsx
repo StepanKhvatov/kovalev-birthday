@@ -5,6 +5,8 @@ import brz from "../images/brz.png";
 import cone from "../images/cone.png";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { isMobile } from "react-device-detect";
+import drift from "../images/drift.jpg";
 
 const fromCopsStyles = {
   left: "-1500px",
@@ -93,12 +95,16 @@ const Race = () => {
             className={raceStyles["video-container"]}
             style={videoStyles}
           >
-            <video
-              src="https://wsapi.zenfuse.io/uploads/drift_7e6cff567f.mp4"
-              className={raceStyles.video}
-              muted
-              autoPlay
-            ></video>
+            {!isMobile ? (
+              <video
+                src="https://wsapi.zenfuse.io/uploads/drift_7e6cff567f.mp4"
+                className={raceStyles.video}
+                muted
+                autoPlay
+              ></video>
+            ) : (
+              <img className={raceStyles.video} alt="drift" src={drift} />
+            )}
           </animated.div>
           <animated.img
             src={cone}
