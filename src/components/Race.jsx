@@ -3,7 +3,6 @@ import { useSpring, animated } from "react-spring";
 import cops from "../images/cops.png";
 import brz from "../images/brz.png";
 import cone from "../images/cone.png";
-import drift from "../images/drift.mp4";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -95,7 +94,7 @@ const Race = () => {
             style={videoStyles}
           >
             <video
-              src={drift}
+              src="https://wsapi.zenfuse.io/uploads/drift_7e6cff567f.mp4"
               className={raceStyles.video}
               muted
               autoPlay
