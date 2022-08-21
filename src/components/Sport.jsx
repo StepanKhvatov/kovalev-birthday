@@ -24,7 +24,9 @@ const Sport = () => {
                 loop
               >
                 <source
-                  src={"./2022-08-21 01.43.49.mp4"}
+                  src={
+                    "https://wsapi.zenfuse.io/uploads/2022_08_21_01_43_49_890240a7f8.mp4"
+                  }
                   type="video/mp4"
                 />
               </video>
