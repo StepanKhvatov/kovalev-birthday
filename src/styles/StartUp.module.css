@@ -14,3 +14,23 @@
   background: #f9f9f9;
   border-radius: 28.3086px;
 }
+
+.melon {
+  position: absolute;
+  width: 212px;
+  height: 339px;
+  left: 0;
+  top: 80px;
+  object-fit: contain;
+  transform: rotate(41.39deg);
+}
+
+@media screen and (max-width: 968px) {
+  .melon {
+    position: absolute;
+    width: 170px;
+    height: 240px;
+    left: 0;
+    top: 80px;
+  }
+}
