@@ -1,6 +1,7 @@
 import tigerImage from "../images/tiger.png";
 import sportStyles from "../styles/Sport.module.css";
 import pumpItImage from "../images/pumpIt.png";
+import ReactPlayer from "react-player";
 
 const Sport = () => {
   return (
@@ -16,7 +17,7 @@ const Sport = () => {
           </div>
           <div className={sportStyles["content-container"]}>
             <div className={sportStyles["video-container"]}>
-              <video
+              {/* <video
                 className={sportStyles["content-block"]}
                 title="sport"
                 muted
@@ -29,7 +30,18 @@ const Sport = () => {
                   }
                   type="video/mp4"
                 />
-              </video>
+              </video> */}
+              <div className={sportStyles["content-block"]}>
+                <ReactPlayer
+                  width="100%"
+                  height="100%"
+                  playing
+                  loop
+                  muted
+                  url="https://wsapi.zenfuse.io/uploads/2022_08_21_01_43_49_890240a7f8.mp4"
+                />
+              </div>
+
               <img src={tigerImage} alt="tiger" className={sportStyles.tiger} />
             </div>
             <p className={sportStyles.vs}>VS</p>
