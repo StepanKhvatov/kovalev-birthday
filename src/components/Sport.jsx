@@ -19,12 +19,13 @@ const Sport = () => {
             <div className={sportStyles["video-container"]}>
               <video
                 className={sportStyles["content-block"]}
-                src={sportVideo}
                 title="sport"
                 muted
                 autoPlay
                 loop
-              />
+              >
+                <source src={sportVideo} type="video/mp4" />
+              </video>
               <img src={tigerImage} alt="tiger" className={sportStyles.tiger} />
             </div>
             <p className={sportStyles.vs}>VS</p>
