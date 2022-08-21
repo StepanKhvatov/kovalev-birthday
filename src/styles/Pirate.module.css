@@ -21,14 +21,14 @@
   margin: 0;
 }
 
-.blur{
+.blur {
   width: 130px;
   height: 33px;
   margin-left: 12px;
   margin-right: 12px;
 }
 
-.people{
+.people {
   position: absolute;
   bottom: -23px;
   right: -40px;
@@ -72,7 +72,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .subtitle{
+  .subtitle {
     text-align: center;
   }
 }
@@ -81,41 +81,41 @@
   .title {
     font-size: 50px;
   }
-  .subtitle{
+
+  .subtitle {
     font-size: 30px;
     line-height: 33px;
   }
-  }
+}
 
 @media screen and (max-width: 600px) {
   .card {
     width: 100%;
   }
-  .people{
+
+  .people {
     width: 280px;
     height: 356px;
   }
+
   .pirate {
     width: 290px;
     height: 383px;
   }
+
   .title {
     font-size: 36px;
     line-height: 52px;
+    text-align: left;
   }
-  .subtitle{
+
+  .subtitle {
     font-size: 26px;
-line-height: 55px;
+    line-height: 33px;
+    text-align: left;
   }
-  .blur{
+
+  .blur {
     margin: 0 1px 0 1px;
   }
 }
-
-
-/* @media screen and (max-width: 468px) {
-  .subtitle{
-    font-size: 34px;
-    line-height: 47px;
-  }
-} */
