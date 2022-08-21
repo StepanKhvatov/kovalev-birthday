@@ -25,9 +25,10 @@
 .gradient-title {
   composes: title;
   background: -webkit-linear-gradient(
-    rgba(255, 97, 97, 1),
-    rgba(228, 62, 255, 1),
-    rgba(242, 235, 63, 1)
+    89.97deg,
+    #fff730 0.03%,
+    #ffa63d 40.75%,
+    #ff4a96 82.25%
   );
   background-clip: text;
   -webkit-background-clip: text;
