@@ -1,6 +1,8 @@
 import tigerImage from "../images/tiger.png";
 import sportStyles from "../styles/Sport.module.css";
 import pumpItImage from "../images/pumpIt.png";
+import sportImage from "../images/sport.jpg";
+import { isMobile } from "react-device-detect";
 
 const Sport = () => {
   return (
@@ -16,20 +18,29 @@ const Sport = () => {
           </div>
           <div className={sportStyles["content-container"]}>
             <div className={sportStyles["video-container"]}>
-              <video
-                className={sportStyles["content-block"]}
-                title="sport"
-                muted
-                autoPlay
-                loop
-              >
-                <source
-                  src={
-                    "https://wsapi.zenfuse.io/uploads/2022_08_21_01_43_49_890240a7f8.mp4"
-                  }
-                  type="video/mp4"
+              {!isMobile ? (
+                <video
+                  className={sportStyles["content-block"]}
+                  title="sport"
+                  muted
+                  autoPlay
+                  loop
+                >
+                  <source
+                    src={
+                      "https://wsapi.zenfuse.io/uploads/2022_08_21_01_43_49_890240a7f8.mp4"
+                    }
+                    type="video/mp4"
+                  />
+                </video>
+              ) : (
+                <img
+                  src={sportImage}
+                  className={sportStyles["content-block"]}
+                  alt="sport"
                 />
-              </video>
+              )}
+
               <img src={tigerImage} alt="tiger" className={sportStyles.tiger} />
             </div>
             <p className={sportStyles.vs}>VS</p>
