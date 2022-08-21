@@ -22,6 +22,7 @@ const Sport = () => {
                 title="sport"
                 muted
                 autoPlay
+                loop
               />
               <img src={tigerImage} alt="tiger" className={sportStyles.tiger} />
             </div>

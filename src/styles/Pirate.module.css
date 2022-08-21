@@ -8,6 +8,7 @@
   color: #0065ff;
   text-align: left;
   margin-bottom: 40px;
+  font-size: 60px;
 }
 
 .subtitle {
@@ -22,6 +23,7 @@
 
 .blur{
   width: 130px;
+  height: 33px;
   margin-left: 12px;
   margin-right: 12px;
 }
@@ -75,6 +77,16 @@
   }
 }
 
+@media screen and (max-width: 968px) {
+  .title {
+    font-size: 50px;
+  }
+  .subtitle{
+    font-size: 30px;
+    line-height: 33px;
+  }
+  }
+
 @media screen and (max-width: 600px) {
   .card {
     width: 100%;
@@ -87,17 +99,23 @@
     width: 290px;
     height: 383px;
   }
-}
-@media screen and (max-width: 968px) {
-.subtitle{
-  font-size: 50px;
-  line-height: 77px;
-}
+  .title {
+    font-size: 36px;
+    line-height: 52px;
+  }
+  .subtitle{
+    font-size: 26px;
+line-height: 55px;
+  }
+  .blur{
+    margin: 0 1px 0 1px;
+  }
 }
 
-@media screen and (max-width: 468px) {
+
+/* @media screen and (max-width: 468px) {
   .subtitle{
     font-size: 34px;
     line-height: 47px;
   }
-}
+} */

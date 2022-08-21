@@ -27,6 +27,7 @@
   margin: 0;
   text-align: end;
   line-height: 51px;
+  font-family: "Futura PT";
 }
 .content-container {
   margin-top: 140px;
@@ -46,10 +47,11 @@
   font-size: 60px;
   line-height: 86.88px;
   margin: 0;
+  font-family: "Dela Gothic One";
 }
 .tiger {
   position: absolute;
-  left: 0;
+  left: -20px;
   bottom: -27px;
   width: 515px;
   height: 335px;
@@ -76,11 +78,11 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    left: -20px;
   }
   .tiger {
     width: 420px;
     height: 250px;
+    left: -20px;
   }
 }
 
@@ -91,7 +93,7 @@
   .title {
     font-size: 50px;
   }
-  .video-container {
+  .tiger {
     left: -15px;
   }
 }
