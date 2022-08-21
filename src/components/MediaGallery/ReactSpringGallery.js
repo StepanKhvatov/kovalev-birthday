@@ -4,13 +4,27 @@ import { useDrag } from "@use-gesture/react";
 import PrevChevron from "../../images/prev.svg";
 import NextChevron from "../../images/next.svg";
 
-function ReactSpringGallery({
-  media,
-  activeSlide = 0,
-  setActiveSlide,
-  children,
-  setShow,
-}) {
+const useBreakpoint = (breakpoint) => {
+  const [width, setWidth] = useState(undefined);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener(`resize`, handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener(`resize`, handleResize);
+    };
+  }, []);
+
+  return !width || width >= BREAKPOINTS[breakpoint];
+};
+
+function ReactSpringGallery({ media, activeSlide = 0, setActiveSlide }) {
   const isDesktop = useBreakpoint(`md`);
 
   const [width, setWidth] = useState();
@@ -211,24 +225,4 @@ const BREAKPOINTS = {
   xl: 1024,
   xl: 1280,
   "2xl": 1536,
-};
-
-const useBreakpoint = (breakpoint) => {
-  const [width, setWidth] = useState(undefined);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-
-    window.addEventListener(`resize`, handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener(`resize`, handleResize);
-    };
-  }, []);
-
-  return !width || width >= BREAKPOINTS[breakpoint];
 };

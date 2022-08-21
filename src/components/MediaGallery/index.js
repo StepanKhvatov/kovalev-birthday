@@ -23,7 +23,6 @@ const parseMimeType = (mime) => {
 };
 
 const MediaGallery = ({ media }) => {
-  const [show, setShow] = useState(false);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   return (
@@ -63,7 +62,6 @@ const MediaGallery = ({ media }) => {
             activeSlide={activeSlideIndex}
             setActiveSlide={setActiveSlideIndex}
             media={media}
-            setShow={setShow}
           />
         </div>
       </div>
