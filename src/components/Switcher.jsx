@@ -22,28 +22,35 @@ const randomInRange = (min, max) => {
 };
 
 const firstFrame = () => {
-  confetti(
+  const myCanvas = document.getElementById("canvas");
+
+  const myConfetti = confetti.create(myCanvas, {
+    resize: true,
+    useWorker: true,
+  });
+
+  myConfetti(
     Object.assign({}, defaults, {
       particleCount: 50,
       origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
     })
   );
 
-  confetti(
+  myConfetti(
     Object.assign({}, defaults, {
       particleCount: 50,
       origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
     })
   );
 
-  confetti(
+  myConfetti(
     Object.assign({}, defaults, {
       particleCount: 50,
       origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
     })
   );
 
-  confetti(
+  myConfetti(
     Object.assign({}, defaults, {
       particleCount: 50,
       origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
@@ -51,14 +58,29 @@ const firstFrame = () => {
   );
 };
 
-const secondFrame = (animationEnd, setAnimationEnd) => {
+const secondFrame = () => {
+  let isShowFallen = false;
+
+  const myCanvas = document.getElementById("canvas");
+
+  const myConfetti = confetti.create(myCanvas, {
+    resize: true,
+    useWorker: true,
+  });
+
+  if (isShowFallen) {
+    return;
+  }
+
+  const animationEnd = Date.now() + duration;
+
   const timeLeft = animationEnd - Date.now();
 
   const ticks = Math.max(200, 500 * (timeLeft / duration));
 
   skew = Math.max(0.8, skew - 0.001);
 
-  confetti({
+  myConfetti({
     particleCount: 1,
     startVelocity: 0,
     ticks: ticks,
@@ -77,7 +99,7 @@ const secondFrame = (animationEnd, setAnimationEnd) => {
     return requestAnimationFrame(secondFrame);
   }
 
-  setAnimationEnd(Date.now() + duration);
+  isShowFallen = true;
 };
 
 const Switcher = () => {
@@ -89,6 +111,7 @@ const Switcher = () => {
 
     if (!isOn) {
       firstFrame();
+      secondFrame();
     }
   };
 

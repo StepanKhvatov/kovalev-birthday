@@ -4,6 +4,10 @@ import bannerStyles from "../styles/Banner.module.css";
 const Banner = () => {
   return (
     <section className={bannerStyles.section}>
+      <canvas
+        style={{ widht: "100%", height: "100%", position: "absolute" }}
+        id="canvas"
+      ></canvas>
       <div className="container">
         <div className={bannerStyles["title-container"]}>
           <h1 className={`${bannerStyles.title} title`}>Tada-a-am!</h1>
