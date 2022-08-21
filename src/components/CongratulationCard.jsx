@@ -29,6 +29,7 @@ const CongratulationCard = ({ text, name, color, index }) => {
         transform: `${
           transformsArray[index % transformsArray.length]
         } scale(0.9)`,
+
         backgroundColor: color,
         color: textColorByBackground[color],
       }}
