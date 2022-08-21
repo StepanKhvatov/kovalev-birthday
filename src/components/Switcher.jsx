@@ -22,35 +22,28 @@ const randomInRange = (min, max) => {
 };
 
 const firstFrame = () => {
-  const myCanvas = document.getElementById("canvas");
-
-  const myConfetti = confetti.create(myCanvas, {
-    resize: true,
-    useWorker: true,
-  });
-
-  myConfetti(
+  confetti(
     Object.assign({}, defaults, {
       particleCount: 50,
       origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
     })
   );
 
-  myConfetti(
+  confetti(
     Object.assign({}, defaults, {
       particleCount: 50,
       origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
     })
   );
 
-  myConfetti(
+  confetti(
     Object.assign({}, defaults, {
       particleCount: 50,
       origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
     })
   );
 
-  myConfetti(
+  confetti(
     Object.assign({}, defaults, {
       particleCount: 50,
       origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
@@ -58,29 +51,16 @@ const firstFrame = () => {
   );
 };
 
+let snowAnimationEnd;
+
 const secondFrame = () => {
-  let isShowFallen = false;
-
-  const myCanvas = document.getElementById("canvas");
-
-  const myConfetti = confetti.create(myCanvas, {
-    resize: true,
-    useWorker: true,
-  });
-
-  if (isShowFallen) {
-    return;
-  }
-
-  const animationEnd = Date.now() + duration;
-
-  const timeLeft = animationEnd - Date.now();
+  const timeLeft = snowAnimationEnd - Date.now();
 
   const ticks = Math.max(200, 500 * (timeLeft / duration));
 
   skew = Math.max(0.8, skew - 0.001);
 
-  myConfetti({
+  confetti({
     particleCount: 1,
     startVelocity: 0,
     ticks: ticks,
@@ -98,20 +78,25 @@ const secondFrame = () => {
   if (timeLeft > 0) {
     return requestAnimationFrame(secondFrame);
   }
-
-  isShowFallen = true;
 };
 
 const Switcher = () => {
   const [isOn, setIsOn] = useState(false);
-  const [animationEnd, setAnimationEnd] = useState(Date.now() + duration);
+  const [animationEnd, setAnimationEnd] = useState(false);
 
   const toggleSwitch = () => {
     setIsOn(!isOn);
 
     if (!isOn) {
       firstFrame();
-      secondFrame();
+
+      if (!animationEnd) {
+        snowAnimationEnd = Date.now() + duration;
+
+        setAnimationEnd(true);
+
+        secondFrame();
+      }
     }
   };
 
