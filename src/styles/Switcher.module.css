@@ -37,7 +37,6 @@
 }
 
 .title {
-  position: absolute;
   font-family: "Futura PT";
   right: 90px;
   font-weight: 500;
@@ -45,13 +44,18 @@
   line-height: 95px;
   text-align: center;
   color: white;
-  transition: all 0.2s;
+  transition: opacity 0.1s;
   pointer-events: none;
+  width: fit-content;
 }
 
-.switcher[active="true"] .title {
-  right: auto;
-  left: 90px;
+.title-layout {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 80px 21px 80px;
 }
 
 @media screen and (max-width: 968px) {
@@ -72,9 +76,8 @@
     right: 40px;
   }
 
-  .switcher[active="true"] .title {
-    right: auto;
-    left: 40px;
+  .title-layout {
+    padding: 21px 50px 21px 50px;
   }
 }
 
@@ -96,8 +99,7 @@
     right: 30px;
   }
 
-  .switcher[active="true"] .title {
-    right: auto;
-    left: 30px;
+  .title-layout {
+    padding: 21px 40px 21px 40px;
   }
 }

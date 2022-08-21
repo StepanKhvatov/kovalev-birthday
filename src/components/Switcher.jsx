@@ -106,7 +106,20 @@ const Switcher = () => {
       active={String(isOn)}
       onClick={toggleSwitch}
     >
-      <p className={switcherStyles.title}>{isOn ? "ON" : "OFF"}</p>
+      <div className={switcherStyles["title-layout"]}>
+        <p
+          style={{ opacity: isOn ? "1" : "0" }}
+          className={switcherStyles.title}
+        >
+          ON
+        </p>
+        <p
+          style={{ opacity: !isOn ? "1" : "0" }}
+          className={switcherStyles.title}
+        >
+          OFF
+        </p>
+      </div>
       <motion.div
         className={switcherStyles["switcher-handler"]}
         layout
