@@ -1,7 +1,6 @@
 import tigerImage from "../images/tiger.png";
 import sportStyles from "../styles/Sport.module.css";
 import pumpItImage from "../images/pumpIt.png";
-import sportVideo from "../video/2022-08-21 01.43.49.mp4";
 
 const Sport = () => {
   return (
@@ -24,7 +23,10 @@ const Sport = () => {
                 autoPlay
                 loop
               >
-                <source src={sportVideo} type="video/mp4" />
+                <source
+                  src={"./2022-08-21 01.43.49.mp4"}
+                  type="video/mp4"
+                />
               </video>
               <img src={tigerImage} alt="tiger" className={sportStyles.tiger} />
             </div>
