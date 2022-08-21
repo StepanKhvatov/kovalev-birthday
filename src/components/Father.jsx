@@ -5,8 +5,8 @@ import fatherStyles from "../styles/Father.module.css";
 const Father = () => {
   return (
     <section className={fatherStyles.section}>
-      <img src={baboon} alt="baboon" className={fatherStyles.baboon} />
-      <div className="container">
+      <div style={{ position: "relative" }} className="container">
+        <img src={baboon} alt="baboon" className={fatherStyles.baboon} />
         <div className={fatherStyles.content}>
           <div className={fatherStyles["image-container"]}>
             <img src={father} alt="father" className={fatherStyles.image} />
