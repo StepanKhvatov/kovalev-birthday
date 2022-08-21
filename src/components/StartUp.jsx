@@ -67,6 +67,7 @@ const StartUp = () => {
         </h2>
         <div className={startUpStyles["carousel-container"]}>
           <Carousel
+            dragThreshold={0.2}
             slidesToShow={1}
             slidesToScroll={1}
             cellSpacing={30}

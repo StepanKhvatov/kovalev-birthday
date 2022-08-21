@@ -12,8 +12,13 @@ const Pirate = () => {
   const textRef = useRef(null);
   const imageRef = useRef(null);
 
-  const textInView = useInView(textRef, { once: true });
-  const imageInView = useInView(imageRef, { once: true });
+  const textInView = useInView(textRef, {
+    once: true,
+  });
+
+  const imageInView = useInView(imageRef, {
+    once: true,
+  });
 
   return (
     <section className={pirateStyles.section}>
@@ -35,7 +40,15 @@ const Pirate = () => {
                 className={pirateStyles.blur}
                 onClick={() => setBlur(!blur)}
               >
-                {blur ? <img src={blurImage} alt="шлюпки"></img> : `шлюпки`}
+                {blur ? (
+                  <img
+                    src={blurImage}
+                    alt="шлюпки"
+                    className={pirateStyles["blur-image"]}
+                  ></img>
+                ) : (
+                  `шлюпки`
+                )}
               </button>
               ». Ну или как-то так. Еще пираты ходят в кино только на пиратские
               фильмы и имеют сертификат об обучении.
