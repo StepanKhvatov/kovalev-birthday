@@ -11,7 +11,8 @@ const Sport = () => {
           <div className={sportStyles["title-container"]}>
             <h2 className={`${sportStyles.title} title`}>успешный спортсмен</h2>
             <p className={sportStyles.description}>
-              Все успешные спортсмены целеустремленные{" "}
+              Все успешные спортсмены целеустремленные и всегда добиваются своей
+              цели
             </p>
           </div>
           <div className={sportStyles["content-container"]}>

@@ -22,13 +22,16 @@
   display: flex;
   justify-content: space-between;
 }
+
 .description {
   font-size: 40px;
   margin: 0;
   text-align: end;
   line-height: 51px;
   font-family: "Futura PT";
+  max-width: 630px;
 }
+
 .content-container {
   margin-top: 140px;
   display: flex;
@@ -36,6 +39,7 @@
   gap: 45px;
   justify-content: space-between;
 }
+
 .content-block {
   width: 520px;
   height: 590px;
@@ -43,12 +47,14 @@
   overflow: hidden;
   object-fit: cover;
 }
+
 .vs {
   font-size: 60px;
   line-height: 86.88px;
   margin: 0;
   font-family: "Dela Gothic One";
 }
+
 .tiger {
   position: absolute;
   left: -20px;
@@ -71,6 +77,7 @@
     line-height: 64px;
   }
   .content-container {
+    margin-top: 40px;
     flex-direction: column;
   }
   .video-container {
