@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import congratulationCardStyles from "../styles/CongratulationCard.module.css";
 
 const transformsArray = [
@@ -35,7 +36,9 @@ const CongratulationCard = ({ text, name, color, index }) => {
       }}
       className={congratulationCardStyles.card}
     >
-      <p className={congratulationCardStyles.text}>{text}</p>
+      <div className={congratulationCardStyles.text}>
+        <ReactMarkdown>{text}</ReactMarkdown>
+      </div>
       <h4 className={congratulationCardStyles.name}>{name}</h4>
     </article>
   );
