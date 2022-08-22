@@ -80,12 +80,14 @@ const CongratulationForm = ({ setData, selectedColor, setSelectedColor }) => {
       <textarea
         required
         name="text"
+        maxLength={500}
         className={congratulationFormStyles.textarea}
         placeholder="Напиши свое поздравление (не забудь добавить эмодзи)"
       />
       <input
         required
         name="name"
+        maxLength={100}
         className={congratulationFormStyles.input}
         placeholder="От кого"
       />

@@ -41,6 +41,8 @@
   .card {
     padding: 35px;
     min-height: 440px;
+    transform: none !important;
+    border-radius: 30px;
   }
 
   .text {
